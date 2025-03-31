@@ -3,15 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import { Doc, Id } from "@/convex/_generated/dataModel";
 import { Button } from "@/components/ui/button";
-import { ChatRequestBody, StreamMessageType } from "@/lib/types";
-
-import { createSSEParser } from "@/lib/SSEParser";
 
 import { ArrowRight } from "lucide-react";
 import { getConvexClient } from "@/lib/convex";
 import { api } from "@/convex/_generated/api";
 import WelcomeMessage from "./WelcomeMessage";
 import { MessageBubble } from "./MessageBubble";
+import { createSSEParser } from "@/lib/SSEParser";
+import { ChatRequestBody, StreamMessageType } from "@/lib/types";
 
 interface ChatInterfaceProps {
   chatId: Id<"chats">;
